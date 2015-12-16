@@ -1,5 +1,5 @@
 <?php
-	require_once( 'library/BoxAPI.class.php' );
+	require_once('src/BoxAPI.class.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -12,6 +12,11 @@
             "role": "Developer"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Boxapi\\": "src/"
+        }
+    },
     "support": {
         "issues": "https://github.com/golchha21/BoxPHPAPI/issues",
         "source": "https://github.com/golchha21/BoxPHPAPI"
