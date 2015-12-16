@@ -1,9 +1,9 @@
 <?php
+namespace Apibox;
 define( '_CODENAME', 'BoxPHPAPI');
 define( '_VERSION', '1.0.7');
-error_reporting(E_ERROR);
 
-class Box_API {
+class Apibox {
 
 	public $client_id 		= '';
 	public $client_secret 	= '';

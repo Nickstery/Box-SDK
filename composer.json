@@ -14,7 +14,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Boxapi\\": "src/"
+            "Apibox\\": "src/"
         }
     },
     "support": {
