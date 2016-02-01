@@ -125,8 +125,8 @@ class Apibox {
 		return array_filter($return);
 	}
 
-	public function create_folder($name, $parent_id) {
-		$url = @$this->build_url("/folders", array('access_token' => $_SESSION['user']['box']['access_token']));
+	public function create_folder($name, $parent_id, $access_token) {
+		$url = @$this->build_url("/folders", array('access_token' => $access_token));
 		$params = array('name' => $name, 'parent' => array('id' => $parent_id));
 
 		$result = json_decode($this->post($url, json_encode($params)), true);
