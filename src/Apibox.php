@@ -179,7 +179,7 @@ class Apibox {
 	}
 
 	/* Uploads a file */
-	public function put_file($filename, $name ,$parent_id) {
+	public function put_file($filename, $name ,$parent_id, $access_token) {
 		/*$url = $this->build_url('/files/content', array(), $this->upload_url);
         if(isset($name)){
             $name = basename($filename);
@@ -193,7 +193,7 @@ class Apibox {
         echo json_decode($this->post($url, $params), true);*/
 
 		$path = realpath($filename);
-		$token = $_SESSION['user']['box']['access_token'];
+		$token = $access_token;
 		$cmd = "curl https://upload.box.com/api/2.0/files/content \
 -H \"Authorization: Bearer $token\" -X POST \
 -F attributes='{\"name\":\"$name\",\"parent\": {\"id\":\"$parent_id\"}}' \
